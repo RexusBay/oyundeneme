@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: ask-oyunu
+    runtime: docker
+    plan: free
+    autoDeployTrigger: commit
+    healthCheckPath: /api/health
