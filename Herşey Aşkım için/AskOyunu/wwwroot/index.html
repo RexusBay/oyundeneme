@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalp Cizgisi</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero">
+            <p class="eyebrow">Iki kisilik online mini oyun</p>
+            <h1>Kalp Cizgisi</h1>
+            <p class="subtitle">Oda kur, linki paylas, sirayla kare sec ve 4'lu cizgiyi ilk sen tamamla.</p>
+        </section>
+
+        <section class="panel setup-panel" id="setupPanel">
+            <div class="field-group">
+                <label for="nameInput">Ismin</label>
+                <input id="nameInput" maxlength="20" placeholder="Mesela Kemal">
+            </div>
+
+            <div class="actions">
+                <button id="createButton" class="primary">Yeni oda olustur</button>
+            </div>
+
+            <div class="join-row">
+                <div class="field-group">
+                    <label for="roomInput">Oda kodu</label>
+                    <input id="roomInput" maxlength="6" placeholder="ABC123">
+                </div>
+                <button id="joinButton">Odaya katil</button>
+            </div>
+        </section>
+
+        <section class="panel game-panel hidden" id="gamePanel">
+            <div class="topbar">
+                <div>
+                    <p class="meta-label">Oda kodu</p>
+                    <strong id="roomCode">------</strong>
+                </div>
+                <button id="copyButton">Linki kopyala</button>
+            </div>
+
+            <div class="status-card">
+                <p id="statusText">Baglaniyor...</p>
+                <p id="turnText" class="turn-text"></p>
+            </div>
+
+            <div class="players" id="players"></div>
+
+            <div class="board" id="board" aria-label="Oyun tahtasi"></div>
+
+            <div class="footer-actions">
+                <button id="restartButton">Yeni raund</button>
+                <button id="leaveButton" class="ghost">Odadan cik</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
